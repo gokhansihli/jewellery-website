@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import "./CollectionCard.css";
+import "./collectionCard.css";
 
 function CollectionCard({ name, image }) {
   return (
