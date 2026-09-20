@@ -1,0 +1,90 @@
+.hero {
+  position: relative;
+  width: 100%;
+  /* Ekranın tam boyunu kaplaması için 100vh yapıldı */
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  /* Sabitlenen (fixed) Header'ın Hero resmini kapatmaması için alan açıldı */
+  padding-top: 76px;
+  box-sizing: border-box;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.05));
+}
+
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  left: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 520px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(55px, 7vw, 105px);
+  line-height: 0.95;
+  margin: 0 0 25px;
+}
+
+.hero-content > p:not(.eyebrow) {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.hero-button {
+  display: inline-block;
+  background: white;
+  color: #111;
+  padding: 17px 28px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.hero-button:hover {
+  background: #111;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  /* Mobil Header yüksekliğine göre padding ayarı */
+  .hero {
+    padding-top: 68px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 100vh;
+    min-height: 550px;
+  }
+
+  .hero-content {
+    left: 25px;
+    right: 25px;
+  }
+}

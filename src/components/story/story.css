@@ -1,0 +1,124 @@
+.popular-section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0px;
+  padding-top: 80px;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif; /* Tiffany stili serif font */
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.card-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.jewelry-card {
+  min-width: 600px;
+  max-width: 600px;
+  min-height: 350px;
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fcfcfc;
+  margin-bottom: 15px;
+  border: 1px solid #eee; /* Hafif bir çerçeve */
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 15px;
+  color: #111;
+  margin: 0 0 5px 0;
+  font-weight: 500;
+}
+
+.card-description {
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+
+/* Oklar ve Çizgi Kontrol Alanı */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px auto 40px auto;
+  max-width: 500px; /* Çizgi ve okların toplam genişliği */
+}
+
+.nav-arrow {
+  background: none;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  color: #111;
+  cursor: pointer;
+  padding: 0 5px;
+  user-select: none;
+  transition: opacity 0.2s;
+}
+
+.nav-arrow:hover {
+  opacity: 0.6;
+}
+
+.progress-track {
+  position: relative;
+  flex: 1; /* Kalan boşluğu kapla */
+  height: 2px;
+  background-color: #ccc; /* Gri arka plan çizgisi */
+}
+
+.progress-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #111; /* Siyah genişleyen çubuk */
+  transition: width 0.1s ease-out; /* Pürüzsüz genişleme */
+}
+
+.action-wrapper {
+  text-align: center;
+}
+
+.shop-popular-btn {
+  background-color: transparent;
+  border: 1px solid #111;
+  color: #111;
+  padding: 12px 24px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shop-popular-btn:hover {
+  background-color: #111;
+  color: #fff;
+}
