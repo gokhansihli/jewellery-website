@@ -9,12 +9,10 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* Yukarı kaydırıldığında görünür yap */
 .header--visible {
   transform: translateY(0);
 }
 
-/* Aşağı kaydırıldığında ekran dışına iterek gizle */
 .header--hidden {
   transform: translateY(-100%);
 }
@@ -135,15 +133,10 @@
     font-size: 23px;
   }
 
-  /* Keep search icon visible in the header on mobile screens */
   .header-icons button:first-child {
     display: flex !important;
   }
 }
-
-/* =========================================
-   FULLSCREEN SEARCH MODAL STYLES
-   ========================================= */
 
 .search-modal {
   position: fixed;

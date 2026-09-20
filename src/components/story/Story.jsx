@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./story.css";
 
-// Tiffany & Co. sitesinden örnek ürün verileri (image_0.png referanslı)
 const initialProducts = [
   {
     id: 1,
@@ -58,15 +57,13 @@ export default function Story() {
   const [products, setProducts] = useState(initialProducts);
   const [thumbWidthPercent, setThumbWidthPercent] = useState(25);
 
-  // Çizginin doluluk oranını hesaplar (resimler aksa da çizgi döngüsel dolar)
   const handleScroll = () => {
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
       const totalScrollable = scrollWidth - clientWidth;
 
       if (totalScrollable > 0) {
-        // Her 4 kartta bir çizginin %100 olup başa dönmesi için modül hesabı
-        const cardWidth = 270; // kart genişliği + gap
+        const cardWidth = 270;
         const currentCardIndex =
           Math.floor(scrollLeft / cardWidth) % initialProducts.length;
 
@@ -80,10 +77,9 @@ export default function Story() {
   const scroll = (direction) => {
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      const amount = 270; // Bir kart kaydırma mesafesi
+      const amount = 270;
 
       if (direction === "right") {
-        // En sona yaklaştıysak diziyi arkaya tekrar ekleyerek sonsuz döngü sağlar
         if (scrollLeft + clientWidth >= scrollWidth - amount) {
           setProducts((prev) => [
             ...prev,
@@ -92,13 +88,11 @@ export default function Story() {
         }
         scrollRef.current.scrollBy({ left: amount, behavior: "smooth" });
       } else if (direction === "left") {
-        // En başa geldiysek ve sola basıldıysa dizinin başına eleman ekler
         if (scrollLeft <= 0) {
           setProducts((prev) => [
             ...initialProducts.map((p) => ({ ...p, id: Math.random() })),
             ...prev,
           ]);
-          // Kaydırma pozisyonunu korumak için ufak bir offset
           setTimeout(() => {
             if (scrollRef.current) {
               scrollRef.current.scrollLeft = amount * initialProducts.length;

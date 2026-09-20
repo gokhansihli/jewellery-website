@@ -7,13 +7,10 @@ function Product() {
 
   const product = products.find((item) => item.id === Number(id));
 
-  // Default to an array of images (using product.images or fallback to product.image)
   const images = product?.images ?? (product?.image ? [product.image] : []);
 
-  // Track the currently selected image index
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  // Reset selected image index when route/product changes
   useEffect(() => {
     setSelectedImageIndex(0);
   }, [id]);
@@ -30,7 +27,6 @@ function Product() {
   return (
     <main className="product-page">
       <div className="product-detail-image">
-        {/* Main Display Image */}
         <div className="main-image-container">
           <img
             src={images[selectedImageIndex] || product.image}
@@ -38,7 +34,6 @@ function Product() {
           />
         </div>
 
-        {/* Thumbnail Navigation (renders only if there are 2 or more images) */}
         {images.length > 1 && (
           <div className="product-thumbnails">
             {images.map((imgSrc, index) => (

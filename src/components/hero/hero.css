@@ -1,11 +1,9 @@
 .hero {
   position: relative;
   width: 100%;
-  /* Ekranın tam boyunu kaplaması için 100vh yapıldı */
   height: 100vh;
   min-height: 600px;
   overflow: hidden;
-  /* Sabitlenen (fixed) Header'ın Hero resmini kapatmaması için alan açıldı */
   padding-top: 76px;
   box-sizing: border-box;
 }
@@ -71,7 +69,6 @@
 }
 
 @media (max-width: 900px) {
-  /* Mobil Header yüksekliğine göre padding ayarı */
   .hero {
     padding-top: 68px;
   }

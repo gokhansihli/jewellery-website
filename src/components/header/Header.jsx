@@ -8,15 +8,12 @@ function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  // Search States
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
-  // Safely grab array from imported products
   const productList = Array.isArray(products) ? products : [];
 
-  // Filter products by name or category
   const filteredProducts =
     searchQuery.trim() === ""
       ? []
@@ -34,7 +31,6 @@ function Header() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Keep header in position if menu or full-screen search is open
       if (menuOpen || searchOpen) return;
 
       if (currentScrollY < 50) {
@@ -52,7 +48,6 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY, menuOpen, searchOpen]);
 
-  // Lock body scrolling when full-screen search overlay is open
   useEffect(() => {
     if (searchOpen) {
       document.body.style.overflow = "hidden";
@@ -153,11 +148,9 @@ function Header() {
         </div>
       </header>
 
-      {/* Full-screen Luxury Search Modal */}
       {searchOpen && (
         <div className="search-modal">
           <div className="search-container">
-            {/* Top Bar with Close Button on Right */}
             <div className="search-modal-header">
               <button
                 className="search-modal-close-btn"
@@ -168,7 +161,6 @@ function Header() {
               </button>
             </div>
 
-            {/* Main Title / Search Input */}
             <form onSubmit={handleSearchSubmit} className="search-modal-form">
               <input
                 type="text"
@@ -195,7 +187,6 @@ function Header() {
               </button>
             </form>
 
-            {/* Results Grid View */}
             {searchQuery.trim() !== "" && (
               <div className="search-results-container">
                 {filteredProducts.length > 0 ? (

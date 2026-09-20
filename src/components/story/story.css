@@ -13,8 +13,8 @@
   overflow-x: auto;
   scroll-behavior: smooth;
   padding-bottom: 20px;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .card-container::-webkit-scrollbar {
@@ -37,7 +37,7 @@
   justify-content: center;
   background-color: #fcfcfc;
   margin-bottom: 15px;
-  border: 1px solid #eee; /* Hafif bir çerçeve */
+  border: 1px solid #eee;
 }
 
 .image-wrapper img {
@@ -59,14 +59,13 @@
   margin: 0;
 }
 
-/* Oklar ve Çizgi Kontrol Alanı */
 .carousel-controls {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
   margin: 30px auto 40px auto;
-  max-width: 500px; /* Çizgi ve okların toplam genişliği */
+  max-width: 500px;
 }
 
 .nav-arrow {
@@ -87,9 +86,9 @@
 
 .progress-track {
   position: relative;
-  flex: 1; /* Kalan boşluğu kapla */
+  flex: 1;
   height: 2px;
-  background-color: #ccc; /* Gri arka plan çizgisi */
+  background-color: #ccc;
 }
 
 .progress-thumb {
@@ -97,8 +96,8 @@
   top: 0;
   left: 0;
   height: 100%;
-  background-color: #111; /* Siyah genişleyen çubuk */
-  transition: width 0.1s ease-out; /* Pürüzsüz genişleme */
+  background-color: #111;
+  transition: width 0.1s ease-out;
 }
 
 .action-wrapper {

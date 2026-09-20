@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router";
-import ProductCard from "../components/ProductCard/ProductCard";
+import ProductCard from "../components/productCard/ProductCard";
 import products from "../data/products";
 
 function Jewellery() {
@@ -9,7 +9,6 @@ function Jewellery() {
   const searchQuery = searchParams.get("search");
 
   const filteredProducts = products.filter((product) => {
-    // 1. Filter by category if category param exists
     if (
       category &&
       product.category?.toLowerCase() !== category.toLowerCase()
@@ -17,7 +16,6 @@ function Jewellery() {
       return false;
     }
 
-    // 2. Filter by search query if search param exists
     if (searchQuery) {
       const term = searchQuery.toLowerCase();
       const nameMatch = product.name?.toLowerCase().includes(term);

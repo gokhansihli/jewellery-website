@@ -187,8 +187,6 @@
   line-height: 1.7;
 }
 
-/* Additions for multi-image thumbnail gallery */
-
 .product-detail-image {
   display: flex;
   flex-direction: column;

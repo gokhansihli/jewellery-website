@@ -1,4 +1,4 @@
-import Hero from "../components/Hero/Hero";
+import Hero from "../components/hero/Hero";
 import CollectionCard from "../components/collectionCard/CollectionCard";
 import ProductCard from "../components/productCard/ProductCard";
 import Campaign from "../components/campain/Campaign";
