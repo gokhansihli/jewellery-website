@@ -5,15 +5,14 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-newsletter">
-        <p>STAY CONNECTED</p>
-
-        <h2>Discover our latest collections</h2>
-
-        <form>
-          <input type="email" placeholder="Email address" />
-
-          <button type="submit">Subscribe</button>
-        </form>
+        <div className="footer-newsletter">
+          <p>NEED ASSISTANCE?</p>
+          <h2>We are here to help you</h2>
+          <p>
+            Reach out to our team at <strong>zeymusjewellery@gmail.com</strong>{" "}
+            for personalized guidance.
+          </p>
+        </div>
       </div>
 
       <div className="footer-links">
@@ -34,7 +33,7 @@ function Footer() {
 
         <div>
           <h4>CLIENT CARE</h4>
-          <a href="#">Contact Us</a>
+          <Link to="/about">Contact Us</Link>
           <a href="#">Delivery</a>
           <a href="#">Returns</a>
           <a href="#">Care Guide</a>
@@ -42,9 +41,10 @@ function Footer() {
 
         <div>
           <h4>FOLLOW</h4>
-          <a href="#">Instagram</a>
-          <a href="#">Pinterest</a>
-          <a href="#">Facebook</a>
+          <a href="https://www.instagram.com/zeymusjewellery/">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61594724524056">
+            Facebook
+          </a>
         </div>
       </div>
 

@@ -26,6 +26,17 @@ function About() {
           From the first sketch to the finished piece, we focus on proportion,
           craftsmanship and timeless design.
         </p>
+        <h2>Contact Us</h2>
+        <p>
+          Have a question about our collection, need assistance with sizing, or
+          wish to discuss a custom piece? We are here to help.
+        </p>
+
+        <div>
+          <p>
+            <strong>Email:</strong> zeymusjewellery@gmail.com
+          </p>
+        </div>
       </section>
     </main>
   );

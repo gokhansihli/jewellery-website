@@ -58,7 +58,9 @@ function Product() {
 
         <p className="detail-description">{product.description}</p>
 
-        <button className="add-to-bag">Add to bag</button>
+        <Link to="/about" className="add-to-bag">
+          Contact us
+        </Link>
 
         <div className="product-details">
           <details>

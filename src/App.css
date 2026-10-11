@@ -156,6 +156,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .add-to-bag:hover {
